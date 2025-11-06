@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <application
+        android:name=".CensusApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -12,15 +13,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Census">
         <activity
-            android:name=".PersonActivity"
-            android:exported="false" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity"
-                />
-        </activity>
+            android:name="cr.ac.utn.census.ui.about.AboutActivity"
+            android:exported="false"
+            android:parentActivityName="cr.ac.utn.census.ui.MainActivity" />
         <activity
-            android:name=".MainActivity"
+            android:name="cr.ac.utn.census.ui.personform.AddEditPersonActivity"
+            android:exported="false"
+            android:parentActivityName="cr.ac.utn.census.ui.MainActivity" />
+        <activity
+            android:name="cr.ac.utn.census.ui.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
